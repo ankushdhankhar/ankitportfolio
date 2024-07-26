@@ -1,0 +1,234 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Ankush Dhankhar" description="About Ankush Dhankhar Lorem Ipsum">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+			>
+			<div class="aboutimg">
+				<img
+					width="430"
+					src="/assets/about2.jpg"
+					alt="Ankush Dhankhar at work with a colleague"
+				/>
+			</div>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background </h2>
+				<div class="content">
+					<p>I am currently pursuing a B.Tech degree in Computer Science and Artificial Intelligence at <a href="http://nsut.ac.in/">NSUT</a>( Netaji Subhas University of Technology, Dwarka, Delhi ). With a strong foundation in computer science principles and a keen interest in solving real-life problems through technology, I have developed a diverse portfolio of applications and projects. My education includes schooling at <a href="https://www.rpsrewari.edu.in/">RPS </a> Public School in Rewari, Haryana, and <a href="https://opgworldschool.com/dwarka">OPG World School</a>  in Dwarka, Delhi.
+					</p><br>
+					<p>My technical expertise spans programming languages such as Kotlin and JavaScript, and frameworks and libraries like Jetpack Compose and Coroutines. I am proficient in databases including Room Database and Firebase, and skilled in development tools such as Android Studio and Git. Some of the projects I have worked on include <a href="https://www.indicwire.com/">Indic Wire</a>, a news website built using Astro and JavaScript, featuring the 'FlipFlop' card to present different perspectives on the same topic; a movie app that provides detailed information about movies using Kotlin, Jetpack Compose, Coroutines, and Firebase; a notes app that allows users to store and manage notes locally with timestamp features; and a bill-splitting app that calculates the amount per person, including tips, using Kotlin, Jetpack Compose, and Coroutines.
+                    </p><br>
+					<p>In my professional experience as a frontend web developer, I have developed responsive and dynamic web applications, improving user experience and functionality. I am adept at problem-solving, analyzing and resolving complex technical issues, and I work effectively in team settings, contributing to successful project outcomes. Additionally, I am a gaming enthusiast, which enhances my strategic thinking and problem-solving skills. I am dedicated to continuous learning and staying updated with the latest technologies and trends in the software engineering field, positioning myself as a promising software engineer ready to tackle challenging and innovative projects.
+                    </p>
+				</div>
+			</section>
+			<!-- <section>
+				<h2 class="section-title">Education </h2>
+				<div class="content">
+                  <p>I completed my schooling at <a href="https://www.rpsrewari.edu.in/">RPS Public School</a> in 
+					 Rewari , Haryana, for classes VII to VIII , and then at <a href="https://opgworldschool.com/dwarka">
+					 OPG World School</a> in Dwarka, Delhi, for classes IX to XII. I am currently pursuing a B.Tech in
+					 Computer Science with specialization in Artificial Intelligence at <a href="http://nsut.ac.in/">
+					 Netaji Subhas University of Technology</a>, Dwarka , Delhi.
+					</p>
+					</div>
+			</section> -->
+			<section>
+				<h2 class="section-title">Skills </h2>
+				<div class="content1">
+					<div class="skillset">
+						<span><h2>Web Development</h2></span>
+						<br>
+						<span>~HTML</span>
+						<br>
+						<span>~CSS</span>
+						<br>
+						<span>~Astro</span>
+						<br>
+						<span>~Javascript</span>
+						
+					</div>
+					<br>
+					<div class="skillset">
+						<span><h2>App Development</h2></span>
+						<br>
+						<span>~Kotlin</span>
+						<br>
+						<span>~Jetpack Compose</span>
+						<br>
+						<span>~Coroutines</span>
+						<br>
+						<span>~Firebase</span>
+
+						
+					</div>
+					<br>
+					<div class="skillset">
+						<pre><h2>DSA                   </h2></pre>
+						<br>
+						<span>~C++</span>
+					</div>
+					<br>
+					<div class="skillset">
+						<pre><h2>Tools                 </h2></pre>
+						<br>
+						<span>~VS Code</span>
+						<br>
+						<span>~Android Studio</span>
+						<br>
+						<span>~Git Hub</span>
+					</div>
+					
+					<br>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+	
+
+	img {
+		width: 80vw;
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		/* box-shadow: var(--shadow-md); */
+		box-shadow: 3px 3px grey, -0.1em 0 .8em rgb(166, 30, 219);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-2xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	
+	.content a {
+		place-content:initial;
+		text-align:left;
+		padding: 0.25em 0.5em;
+		gap: 0.8em;
+		font-weight: bold;
+		/* color: var(--accent-text-over); */
+		text-decoration:underline;
+		line-height: 1.1;
+		/* border-radius: 999rem; */
+		/* overflow: hidden; */
+	/*	background: var(--gradient-accent-orange); */
+		/* box-shadow: var(--shadow-md); */
+		white-space: nowrap;
+	
+	}
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	.content1 {
+		display:inline-flexbox;
+	
+		grid-column: 2 / 4;
+
+	}
+	.content1 h2{
+		font-size:larger;
+		font-weight: 800;
+	}
+
+	.content1 .skillset{
+	
+		place-content:initial;
+		text-align:left;
+		padding: 1em 1em;
+		margin: 0em 1em;
+		gap: 0.8em;
+		/* color: var(--accent-text-over); */
+		text-decoration:solid;
+		line-height: 1.1;
+		border-radius: 2rem;
+		border: 1mm ridge rgba(163, 123, 187, 0.993);		
+		overflow: hidden;
+		/* background: var(--gradient-accent-orange); */
+		background:rgb(255, 255, 255);
+		box-shadow: var(--shadow-md);
+		white-space: nowrap;
+	}
+	@media (prefers-color-scheme: dark){
+		.content1 h2 {
+			color: black;
+		}
+		.skillset {
+			color: black;
+		}
+	}
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		.aboutimg{
+		display: flex;
+		align-items: center;
+	    }
+
+		img{
+			width: 40vw;
+			margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		/* box-shadow: var(--shadow-md); */
+		box-shadow: 3px 3px grey, -0.1em 0 .8em rgb(166, 30, 219);
+			}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+			font-style:italic;
+		}
+		.section-title{
+			font-weight: 900;
+		}
+		.content1{
+			display:flex;
+		}
+	}
+</style>
